@@ -1,0 +1,42 @@
+Running Code:
+For MinotaurParty.java, run these commands from a terminal: javac MinotaurParty.java
+                                                            java MinotaurParty
+For Atmosphere.java, run these commands from a terminal: javac Atmosphere.java
+                                                         java Atmosphere
+
+Solutions:
+For the Minotaur Party problem, I was tasked with finding a solution to writing notes
+for a bag randomly filled with a number of presents. The problem description described
+a potential solution using some type of linked list, but also stated that that way did
+not work to solve the issue. I was a bit confused at how much I was supposed to deviate
+from that initial solution, but I eventually assumed I would have to change it 
+substantially in order to make sure no errors occurred. I did use a concurrent linked list
+in my solution, and I ended up changing the servants activities from random to a more 
+ordered sequence of events.
+
+For the Mars Atmosphere problem, I made the assumption that I wouldn't actually be using
+minutes and hours for times, as that would take a very long time to test. I was also somewhat
+unsure initially if I should have multiple sensors take a reading every minute, or just one. I
+ended up going with one, assuming that in a real life situation that broken sensors would have
+their spot taken by a working one. I also assumed that getting 5 low and high temperatures each 
+hour would lead to less errors (although in this example they're all random anyways). Similar to
+some other problems in other homeworks, I used a queue so that sensors would know when they're
+reading next.
+
+Efficiency and Runtime:
+The Atmosphere program ran basically as quick as I allowed it to, and I gave it a slight delay
+so that the output was more readable. The Party problem ran very quickly, although that was
+definitely helped by the fact that I took the randomness out of my solution, as that seemed like
+the most logical way for the servants to work.
+
+Evaluation of Input Sizes:
+Each value for number of presents was run 5 times to get the following ranges. It 
+seems like there is more potential benefit for multiple threads when the numbers 
+are larger. 
+
+Runtimes for different number of presents for MinotaurParty:
+250000: 64ms-72ms
+500000: 89ms-110ms
+750000: 117ms-141ms
+1000000: 138ms-158ms
+
